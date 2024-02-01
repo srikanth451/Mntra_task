@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="script.js" defer></script>
+    <div class="firstbox">
+        <input id="title" type="text" placeholder="title">
+        <input id="dateInput" class="float" type="date" min="<?= date('Y-m-d'); ?>" placeholder="date">
+        <br><br>
+        <input id="description" type="text" placeholder="description">
+        <input id="btn" class="float" type="button" value="save">
+    </div><br>
+    <div class="days highlight-button">
+        <button class="day" id="1" type="button" onclick="storeDay('SUN')">SUN</button>
+        <button class="day" id="2" type="button" onclick="storeDay('MON')">MON</button>
+        <button class="day" id="3" type="button" onclick="storeDay('TUE')">TUE</button>
+        <button class="day" id="4" type="button" onclick="storeDay('WED')">WED</button>
+        <button class="day" id="5" type="button" onclick="storeDay('THUS')">THUS</button>
+        <button class="day" id="6" type="button" onclick="storeDay('FRI')">FRI</button>
+        <button class="day" id="7" type="button" onclick="storeDay('SAT')">SAT</button>
+    </div><br>
+
+    <div class="title1" id="day1">
+        <h2>The Title 1</h2>
+        <div id="day1Content">
+            <input id="title1" type="text" placeholder="Title">
+            <input id="description1" type="text" placeholder="Description">
+            <button class="float" onclick="deleteData('SUN')">Delete</button>
+        </div>
+    </div><br>
+
+    <div class="title2">
+        <h2>The title 2</h2>
+        <input id="title2" type="text" placeholder="Title">
+        <input id="description2" type="text" placeholder="description">
+        <button class="float">Delete</button>
+    </div><br>
+    <script>
+        const button = document.getElementById('button');
+      
+        button.addEventListener('click', function() {
+          
+          button.classList.toggle('clicked');
+        });
+      </script>
+
+</body>
+
+</html>
